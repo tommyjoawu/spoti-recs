@@ -5,7 +5,7 @@
     %meta{:content => "width=device-width, initial-scale=1, shrink-to-fit=no", :name => "viewport"}/
     %meta{:content => "Portfolio", :name => "description"}/
     %meta{:content => "Tommy Joa Wu", :name => "author"}/
-    %title Portfolio - Tommy Joa Wu
+    %title Rails 6 Setup
     / Favicon
     / %link{:href => "assets/favicon.ico", :rel => "icon", :type => "image/x-icon"}/
     %link{:src => "/assets/favicon.ico"}
@@ -20,18 +20,18 @@
     / Navigation
     %nav#mainNav.navbar.navbar-expand-lg.bg-secondary.text-uppercase.fixed-top
       .container
-        %a.navbar-brand{:href => "#page-top"} Tommy Joa Wu
+        %a.navbar-brand{:href => "#page-top"} Rails 6 Setup
         %button.navbar-toggler.text-uppercase.font-weight-bold.bg-primary.text-white.rounded{"aria-controls" => "navbarResponsive", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-bs-target" => "#navbarResponsive", "data-bs-toggle" => "collapse", :type => "button"}
           Menu
           %i.fas.fa-bars
         #navbarResponsive.collapse.navbar-collapse
           %ul.navbar-nav.ms-auto
             %li.nav-item.mx-0.mx-lg-1
-              %a.nav-link.py-3.px-0.px-lg-3.rounded{:href => "#portfolio"} Portfolio
+              %a.nav-link.py-3.px-0.px-lg-3.rounded{:href => "#section1"} Section 1
             %li.nav-item.mx-0.mx-lg-1
-              %a.nav-link.py-3.px-0.px-lg-3.rounded{:href => "#about"} Technologies
+              %a.nav-link.py-3.px-0.px-lg-3.rounded{:href => "#section2"} Section 2
             %li.nav-item.mx-0.mx-lg-1
-              %a.nav-link.py-3.px-0.px-lg-3.rounded{:href => "#contact"} Contact
+              %a.nav-link.py-3.px-0.px-lg-3.rounded{:href => "#section3"} Section 3
     / Masthead
     %header.masthead.bg-primary.text-center{:style => "color: white"}
       .container.d-flex.align-items-center.flex-column
@@ -39,9 +39,9 @@
         / = inline_svg_tag "avataaars.svg", class: 'img masthead-avatar mb-5'
         .row.justify-content-center
           .col-4
-            %img.img-fluid{:alt => "...", :src => "/assets/me.png"}/
+            / %img.img-fluid{:alt => "...", :src => "/assets/me.png"}/
         / Masthead Heading
-        %h1.masthead-heading.mb-0.mt-4 Hi, i am Tommy
+        %h1.masthead-heading.mb-0.mt-4 Rails 6 Setup
         / Icon Divider
         .divider-custom.divider-light
           .divider-custom-line
@@ -51,227 +51,26 @@
         / Masthead Subheading
         %h1.masthead-subheading.font-weight-light.mb-0 Software Engineer
     / Portfolio Section
-    %section#portfolio.page-section.portfolio{:style => "background-color: #1F3662"}
+    %section#section1.page-section.portfolio{:style => "background-color: #1F3662"}
       .container
         / Portfolio Section Heading
-        %h2.page-section-heading.text-center.text-uppercase.text-secondary.mb-0{:style => "color: white !important"} Portfolio
+        %h2.page-section-heading.text-center.text-uppercase.text-secondary.mb-0{:style => "color: white !important"} Section 1
         / Icon Divider
-        .divider-custom
-          .divider-custom-line
-          .divider-custom-icon
-            %i.fa-solid.fa-folder-open
-          .divider-custom-line
-        / Portfolio Grid Items
-        .row.justify-content-center
-          / Portfolio Item 1
-          .col-md-6.col-lg-4.mb-5
-            .portfolio-item.mx-auto{"data-bs-target" => "#portfolioModal1", "data-bs-toggle" => "modal"}
-              .portfolio-item-caption.d-flex.align-items-center.justify-content-center.h-100.w-100
-                .portfolio-item-caption-content.text-center.text-white
-                  %i.fas.fa-plus.fa-3x
-              %img.img-fluid{:alt => "...", :src => "/assets/cabin.png"}/
-          / Portfolio Item 2
-          .col-md-6.col-lg-4.mb-5
-            .portfolio-item.mx-auto{"data-bs-target" => "#portfolioModal2", "data-bs-toggle" => "modal"}
-              .portfolio-item-caption.d-flex.align-items-center.justify-content-center.h-100.w-100
-                .portfolio-item-caption-content.text-center.text-white
-                  %i.fas.fa-plus.fa-3x
-              %img.img-fluid{:alt => "...", :src => "assets/cake.png"}/
-          / Portfolio Item 3
-          .col-md-6.col-lg-4.mb-5
-            .portfolio-item.mx-auto{"data-bs-target" => "#portfolioModal3", "data-bs-toggle" => "modal"}
-              .portfolio-item-caption.d-flex.align-items-center.justify-content-center.h-100.w-100
-                .portfolio-item-caption-content.text-center.text-white
-                  %i.fas.fa-plus.fa-3x
-              %img.img-fluid{:alt => "...", :src => "assets/circus.png"}/
-          / Portfolio Item 4
-          .col-md-6.col-lg-4.mb-5.mb-lg-0
-            .portfolio-item.mx-auto{"data-bs-target" => "#portfolioModal4", "data-bs-toggle" => "modal"}
-              .portfolio-item-caption.d-flex.align-items-center.justify-content-center.h-100.w-100
-                .portfolio-item-caption-content.text-center.text-white
-                  %i.fas.fa-plus.fa-3x
-              %img.img-fluid{:alt => "...", :src => "assets/game.png"}/
-          / Portfolio Item 5
-          .col-md-6.col-lg-4.mb-5.mb-md-0
-            .portfolio-item.mx-auto{"data-bs-target" => "#portfolioModal5", "data-bs-toggle" => "modal"}
-              .portfolio-item-caption.d-flex.align-items-center.justify-content-center.h-100.w-100
-                .portfolio-item-caption-content.text-center.text-white
-                  %i.fas.fa-plus.fa-3x
-              %img.img-fluid{:alt => "...", :src => "assets/safe.png"}/
-          / Portfolio Item 6
-          .col-md-6.col-lg-4
-            .portfolio-item.mx-auto{"data-bs-target" => "#portfolioModal6", "data-bs-toggle" => "modal"}
-              .portfolio-item-caption.d-flex.align-items-center.justify-content-center.h-100.w-100
-                .portfolio-item-caption-content.text-center.text-white
-                  %i.fas.fa-plus.fa-3x
-              %img.img-fluid{:alt => "...", :src => "assets/submarine.png"}/
+        
     / About Section
-    %section#about.page-section.bg-primary.text-white.mb-0
+    %section#section2.page-section.bg-primary.text-white.mb-0
       .container
         / About Section Heading
-        %h2.page-section-heading.text-center.text-uppercase.text-white Technologies
+        %h2.page-section-heading.text-center.text-uppercase.text-white Section 2
         / Icon Divider
-        .divider-custom.divider-light
-          .divider-custom-line
-          .divider-custom-icon
-            %i.fas.fa-star
-          .divider-custom-line
-        / About Section Content
-        .row.justify-content-center
-          .offset-2.col-5.offset-lg-2.col-lg-4
-            .lead
-              %h3
-                Ruby on Rails
-            .lead
-              %h3
-                Javascript
-            .lead
-              %h3
-                Node.js
-            .lead
-              %h3
-                Ajax
-            .lead
-              %h3
-                CSS
-            / I am a Fullstack Software Engineer, my stack of tecnologies is composed of Ruby on Rails, Javascript, Node.js, Ajax, CSS, HTML5 and PostgreSQL. I have had the opportunities of working in bank related projects and government project with strict rules given by the clients.
-          .col-5.offset-lg-2.col-lg-4
-            .lead
-              %h3
-                HTML
-            .lead
-              %h3
-                PostgreSQL
-            .lead
-              %h3
-                Heroku
-            .lead
-              %h3
-                Git
-          
-        / About Section Button
-        .text-center.mt-4
-          %a.btn.btn-xl.btn-outline-light{:href => "https://drive.google.com/file/d/1i-9-AVSvYOmXS8Rjr0txiSuOFygP7Puo/view?usp=sharing", target: "_blank"}
-            %h3
-              Download my CV!
-            %i.fas.fa-download.me-2
+        
     / Contact Section
-    %section#contact.page-section{:style => "background-color: #1F3662"}
+    %section#section3.page-section{:style => "background-color: #1F3662"}
       .container
         / Contact Section Heading
-        %h2.page-section-heading.text-center.text-uppercase.text-secondary.mb-0.text-white Contact Me
+        %h2.page-section-heading.text-center.text-uppercase.text-secondary.mb-0.text-white Section 3
         / Icon Divider
-        .divider-custom
-          .divider-custom-line
-          .divider-custom-line
-          .divider-custom-line
-        / Contact Section Form
-        .row.justify-content-center
-          .col-2.col-lg-1
-            %a.btn.btn-outline-light.btn-social{:href => "https://www.linkedin.com/in/tommy-joa-174859169/", target: "_blank"}
-              %i.fab.fa-fw.fa-linkedin-in
-        .row.justify-content-center
-          .col-lg-12
-            %h4.text-center.text-secondary.text-white.mt-2.mr-3 
-              www.linkedin.com/in/tommy-joa-174859169/
-        .row.justify-content-center.mt-3
-          .col-2.col-lg-1
-            %a.btn.btn-outline-light.btn-social{:href => "https://github.com/tommyjoawu", target: "_blank"}
-              %i.fab.fa-brands.fa-github
-        .row.justify-content-center
-          .col-lg-11
-            %h4.text-center.text-secondary.text-white.mt-2.mr-3 
-              github.com/tommyjoawu
-        .row.justify-content-center.mt-3              
-          .col-2.col-lg-1
-            %a.btn.btn-outline-light.btn-social{:href => "mailto: tommywj5@gmail.com", target: "_blank"}
-              %i.fab.fa-solid.fa-envelope
-        .row.justify-content-center.mt-3
-          .col-lg-11
-            %h4.text-center.text-secondary.text-white.mt-2.mr-3 
-              tommywj5@gmail.com
-        .row.justify-content-center.mt-3              
-          .col-2.col-lg-1
-            %a.btn.btn-outline-light.btn-social{:href => "https://wa.me/50764836002?text=I%20am%20interested%20in%20your%20portfolio", target: "_blank"}
-              %i.fab.fa-brands.fa-whatsapp
-        .row.justify-content-center.mt-3
-          .col-lg-11
-            %h4.text-center.text-secondary.text-white.mt-2.mr-3 
-              +507 6483 6002
-            / * * * * * * * * * * * * * * *
-            / * * SB Forms Contact Form * *
-            / * * * * * * * * * * * * * * *
-            / This form is pre-integrated with SB Forms.
-            / To make this form functional, sign up at
-            / https://startbootstrap.com/solution/contact-forms
-            / to get an API token!
-            / %form#contactForm{"data-sb-form-api-token" => "API_TOKEN"}
-            /   / Name input
-            /   .form-floating.mb-3
-            /     %input#name.form-control{"data-sb-validations" => "required", :placeholder => "Enter your name...", :type => "text"}/
-            /     %label{:for => "name"} Full name
-            /     .invalid-feedback{"data-sb-feedback" => "name:required"} A name is required.
-            /   / Email address input
-            /   .form-floating.mb-3
-            /     %input#email.form-control{"data-sb-validations" => "required,email", :placeholder => "name@example.com", :type => "email"}/
-            /     %label{:for => "email"} Email address
-            /     .invalid-feedback{"data-sb-feedback" => "email:required"} An email is required.
-            /     .invalid-feedback{"data-sb-feedback" => "email:email"} Email is not valid.
-            /   / Phone number input
-            /   .form-floating.mb-3
-            /     %input#phone.form-control{"data-sb-validations" => "required", :placeholder => "(123) 456-7890", :type => "tel"}/
-            /     %label{:for => "phone"} Phone number
-            /     .invalid-feedback{"data-sb-feedback" => "phone:required"} A phone number is required.
-            /   / Message input
-            /   .form-floating.mb-3
-            /     %textarea#message.form-control{"data-sb-validations" => "required", :placeholder => "Enter your message here...", :style => "height: 10rem", :type => "text"}
-            /     %label{:for => "message"} Message
-            /     .invalid-feedback{"data-sb-feedback" => "message:required"} A message is required.
-            /   / Submit success message
-            /   / 
-            /   / This is what your users will see when the form
-            /   / has successfully submitted
-            /   #submitSuccessMessage.d-none
-            /     .text-center.mb-3
-            /       .fw-bolder Form submission successful!
-            /       To activate this form, sign up at
-            /       %br/
-            /       %a{:href => "https://startbootstrap.com/solution/contact-forms"} https://startbootstrap.com/solution/contact-forms
-            /   / Submit error message
-            /   / 
-            /   / This is what your users will see when there is
-            /   / an error submitting the form
-            /   #submitErrorMessage.d-none
-            /     .text-center.text-danger.mb-3 Error sending message!
-            /   / Submit Button
-            /   %button#submitButton.btn.btn-primary.btn-xl.disabled{:type => "submit"} Send
-    / Footer
-    / %footer.footer.text-center
-    /   .container
-    /     .row
-    /       / Footer Location
-    /       .col-lg-4.mb-5.mb-lg-0
-    /         %h4.text-uppercase.mb-4 Location
-    /         %p.lead.mb-0
-    /           Panama
-    /       / Footer Social Icons
-    /       .col-lg-4.mb-5.mb-lg-0
-    /         / %h4.text-uppercase.mb-4 Around the Web
-    /         %a.btn.btn-outline-light.btn-social.mx-1{:href => "#!"}
-    /           %i.fab.fa-fw.fa-facebook-f
-    /         %a.btn.btn-outline-light.btn-social.mx-1{:href => "#!"}
-    /           %i.fab.fa-fw.fa-twitter
-    /         %a.btn.btn-outline-light.btn-social.mx-1{:href => "https://www.linkedin.com/in/tommy-joa-174859169/", target: "_blank"}
-    /           %i.fab.fa-fw.fa-linkedin-in
-    /         %a.btn.btn-outline-light.btn-social.mx-1{:href => "#!"}
-    /           %i.fab.fa-fw.fa-dribbble
-    /       / Footer About Text
-    /       .col-lg-4
-    /         %h4.text-uppercase.mb-4 About Freelancer
-    /         %p.lead.mb-0
-    /           Freelance is a free to use, MIT licensed Bootstrap theme created by
-    /           %a{:href => "http://startbootstrap.com"} Start Bootstrap
-    /           \.
+        
     / Copyright Section
     .copyright.py-4.text-center.text-white
       .container
