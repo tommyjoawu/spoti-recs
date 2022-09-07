@@ -1,0 +1,8 @@
+include ApplicationHelper
+call_api
+
+HTTParty.get('https://api.nytimes.com/svc/books/v3/lists/combined-print-and-e-book-fiction.json?api-key=yourApiKey')
+
+HTTParty.get("https://api.spotify.com/v1/browse/categories?country=SE&locale=sv_SE&limit=10&offset=5")
+
+curl -X "GET" "https://api.spotify.com/v1/browse/categories?country=SE&locale=sv_SE&limit=10&offset=5" -H "Accept: application/json" -H "Content-Type: application/json" -H "Authorization: Bearer BQAdeBQAOaDAXTJEhgxNV2a0Thji1s0818QvM7meRFPMAY7Ke5GYgeQnv32Oto7lseFlnWZ7QXBoF9C3-VZX-mIjgo4YuBswdF1snRhshrHmdXZJ6IskxeeS6HitRIqww8eIeZwZdzXGSgZWRjSOkaYJ1XfGit4foVq8f1N4PIf_Uye5WayFI5RMSsZsmgThmBC5-hw"

@@ -1,0 +1,15 @@
+%h2.page-section-heading.text-center.text-uppercase.text-secondary.mb-0{:style => "color: white !important"} Top Tracks
+.row
+  - @top_tracks.each do |tt|
+    .col-4.mt-3
+      .card{:style => "width: 18rem;"}
+        %img.card-img-top{:alt => "...", :src => tt.album.images[0]["url"]}/
+        .card-body
+          %h5.card-title 
+            = "#{tt.name} [#{tt.album.release_date}]"
+          %p.card-text
+            %ul
+              %li
+                = "Album: #{tt.album.name}"
+              %li 
+                = "Release Date: #{tt.album.release_date}"

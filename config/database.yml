@@ -16,14 +16,14 @@ default: &default
 development:
   <<: *default
   host: localhost
-  database: tjoa_portfolio_development
+  database: spotify_api_development
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: tjoa_portfolio_test
+  database: spotify_api_test
 
 production:
   <<: *default
-  database: tjoa_portfolio_production
+  database: spotify_api_production

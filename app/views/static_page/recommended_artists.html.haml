@@ -1,0 +1,52 @@
+/ Masthead
+%header.masthead.bg-primary
+  .container.d-flex.align-items-center.flex-column
+    .row.mt-3
+      .col-12
+        %h1.text-white 
+          Recommendations
+    / %input#myInput{:onkeyup => "myFunction()", :placeholder => "Search for names..", :title => "Type in a name", :type => "text"}/
+    .row
+      %table#myTable
+        - @tracks.each do |track|
+          / %tr
+          /   %td   
+          /     = cat.name
+          /   %td 
+          /     %img{:alt => "...", :src => cat.icons[0]["url"]}
+          .col-12.col-md-6.col-lg-3.col-xl-3.mt-3
+            .card.text-white{:style => "background-color: black;"}
+              %img.card-img-top{:alt => "...", :src => track.album.images[0]["url"]}
+              .card-body
+                %h5.card-title 
+                  = track.name
+                %p.card-text
+                  %li
+                    = "Artist: #{track.artists[0].name}"
+                  %li
+                    = "Album: #{track.album.name}"
+                  .mt-3
+                  %a.card-link{:href => track.uri, :target => "_blank"} Spotify
+
+      %br
+
+    
+/ Portfolio Section
+%section#section1.page-section.portfolio{:style => "background-color: #1F3662"}
+  .container.d-flex.align-items-center.flex-column.text-center
+    / About Section Heading
+    / = render "static_page/display_categories"
+    
+    
+/ About Section
+%section#section2.page-section.bg-primary.text-white.mb-0
+  .container
+    / About Section Heading
+    / = render "static_page/display_categories"
+    
+/ Contact Section
+%section#section3.page-section{:style => "background-color: #1F3662"}
+  .container
+    / Contact Section Heading
+    %h2.page-section-heading.text-center.text-uppercase.text-secondary.mb-0.text-white Section 3
+    / Icon Divider

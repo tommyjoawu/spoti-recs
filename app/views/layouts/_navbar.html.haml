@@ -1,0 +1,18 @@
+/ Navigation
+%nav#mainNav.navbar.navbar-expand-lg.bg-secondary.text-uppercase.fixed-top
+  .container
+    %a.navbar-brand{:href => root_path} Spotify API
+    %button.navbar-toggler.text-uppercase.font-weight-bold.bg-primary.text-white.rounded{"aria-controls" => "navbarResponsive", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-bs-target" => "#navbarResponsive", "data-bs-toggle" => "collapse", :type => "button"}
+      Menu
+      %i.fas.fa-bars
+    #navbarResponsive.collapse.navbar-collapse
+      %ul.navbar-nav.ms-auto
+        %li.nav-item.mx-0.mx-lg-1
+          %a.nav-link.py-3.px-0.px-lg-3.rounded{:href => "#section1"} Section 1
+        %li.nav-item.mx-0.mx-lg-1
+          %a.nav-link.py-3.px-0.px-lg-3.rounded{:href => "#section2"} Section 2
+        %li.nav-item.mx-0.mx-lg-1
+          %a.nav-link.py-3.px-0.px-lg-3.rounded{:href => "#section3"} Section 3
+        %li.nav-item.mx-0.mx-lg-1
+          %a.nav-link.py-3.px-0.px-lg-3.rounded{:href => static_page_recommended_artists_path} R. Artists 
+          

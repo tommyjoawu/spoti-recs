@@ -1,0 +1,44 @@
+.container.justify-content-center{:style => "background-color: black; border-radius: 10px;"}
+  .row.mt-3
+    .col-12
+      %h1.text-white 
+        Music Categories
+  / %input#myInput{:onkeyup => "myFunction()", :placeholder => "Search for names..", :title => "Type in a name", :type => "text"}/
+  .row
+    %table#myTable
+      - @categories.each do |cat|
+        / %tr
+        /   %td   
+        /     = cat.name
+        /   %td 
+        /     %img{:alt => "...", :src => cat.icons[0]["url"]}
+        .col-12.col-md-6.col-lg-3.col-xl-3.mt-3
+          - cat_name = cat.name
+          = link_to static_page_recommended_artists_path(cat_name: cat_name) do
+            .card{:style => ""}
+              %img.card-img-top{:alt => "...", :src => cat.icons[0]["url"]}
+              .card-body
+                %h5.card-title 
+                  = cat_name
+    %br
+                      
+      
+/ :javascript
+/   function myFunction() {
+/     var input, filter, table, h5, td, i, txtValue;
+/     input = document.getElementById("myInput");
+/     filter = input.value.toUpperCase();
+/     table = document.getElementById("myTable");
+/     tr = table.getElementsByTagName("card");
+/     for (i = 0; i < tr.length; i++) {
+/       td = tr[i].getElementsByTagName("td")[0];
+/       if (td) {
+/         txtValue = td.textContent || td.innerText;
+/         if (txtValue.toUpperCase().indexOf(filter) > -1) {
+/           tr[i].style.display = "";
+/         } else {
+/           tr[i].style.display = "none";
+/         }
+/       }       
+/     }
+/   }
