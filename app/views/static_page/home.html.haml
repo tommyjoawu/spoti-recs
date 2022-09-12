@@ -1,27 +1,34 @@
 / Masthead
 %header.masthead.bg-primary.text-center
   .container.d-flex.align-items-center.flex-column
-
-    %h1.masthead-heading.mb-0.mt-4.text-white Get music recommendations
-    / Icon Divider
-    .divider-custom.divider-light
-      .divider-custom-line
-      .divider-custom-line
-      .divider-custom-line
-    / Masthead Subheading
-    %h1.masthead-subheading.font-weight-light.mb-0.text-white by
+    .row
+      .col-12
+        %h1.masthead-heading.mb-0.mt-4.text-white Find new music
+        / Icon Divider
+        .divider-custom.divider-light
+          .divider-custom-line
+          .divider-custom-line
+          .divider-custom-line
+    .row
+      .col-12
+      / Masthead Subheading
+      %h1.masthead-subheading.font-weight-light.mb-0.text-white by
     %br
-    .row.justify-content-center
-      .col-6
+
+    .row.justify-content-center 
+      .col-12.col-md-6.col-lg-3.col-xl-3.mt-3
         .card{:style => "background-color: black;"}
+          %img.card-img-top{:href => "#section1", :src => @random_category.icons[0]["url"]}
           .card-body
             %h5.card-title.text-white 
-              %a.nav-link.py-3.px-0.px-lg-3.rounded{:href => "#section1"} Music Category
-      .col-6
+              %a.nav-link.py-3.px-0.px-lg-3.rounded.text-white{:href => "#section1"} Category
+      
+      .col-12.col-md-6.col-lg-3.col-xl-3.mt-3
         .card{:style => "background-color: black;"}
+          %img.card-img-top{:alt => "...", :src => @random_track.album.images[0]["url"]}
           .card-body
             %h5.card-title.text-white
-              %a.nav-link.py-3.px-0.px-lg-3.rounded{:href => "#section2"} Similar Artists
+              %a.nav-link.py-3.px-0.px-lg-3.rounded.text-white{:href => ""} Artist (WIP)
         
     %br
 
@@ -33,18 +40,18 @@
     = render "static_page/display_categories"
     
     
-/ About Section
-%section#section2.page-section.bg-primary.text-white.mb-0
-  .container
-    / About Section Heading
-    / = render "static_page/display_categories"
+/ / About Section
+/ %section#section2.page-section.bg-primary.text-white.mb-0
+/   .container
+/     / About Section Heading
+/     / = render "static_page/display_categories"
     
-/ Contact Section
-%section#section3.page-section{:style => "background-color: #1F3662"}
-  .container
-    / Contact Section Heading
-    %h2.page-section-heading.text-center.text-uppercase.text-secondary.mb-0.text-white Section 3
-    / Icon Divider
+/ / Contact Section
+/ %section#section3.page-section{:style => "background-color: #1F3662"}
+/   .container
+/     / Contact Section Heading
+/     %h2.page-section-heading.text-center.text-uppercase.text-secondary.mb-0.text-white Section 3
+/     / Icon Divider
     
 
 / Portfolio Modals
