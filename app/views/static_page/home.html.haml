@@ -9,28 +9,27 @@
           .divider-custom-line
           .divider-custom-line
           .divider-custom-line
-    .row
-      .col-12
-      / Masthead Subheading
-      %h1.masthead-subheading.font-weight-light.mb-0.text-white by
-    %br
+    / .row
+    /   .col-12
+    /   / Masthead Subheading
+    /   %h1.masthead-subheading.font-weight-light.mb-0.text-white by
+    / %br
 
-    .row.justify-content-center 
-      .col-12.col-md-6.col-lg-3.col-xl-3.mt-3
-        .card{:style => "background-color: black;"}
-          %img.card-img-top{:href => "#section1", :src => @random_category.icons[0]["url"]}
-          .card-body
-            %h5.card-title.text-white 
-              %a.nav-link.py-3.px-0.px-lg-3.rounded.text-white{:href => "#section1"} Category
+    / .row.justify-content-center 
+    /   .col-12
+    /     .card{:style => "background-color: black;"}
+    /       %img.card-img-top{:href => "#section1", :src => @random_category.icons[0]["url"]}
+    /       .card-body
+    /         %h5.card-title.text-white 
+    /           %a.nav-link.py-3.px-0.px-lg-3.rounded.text-white{:href => "#section1"} Category
       
-      .col-12.col-md-6.col-lg-3.col-xl-3.mt-3
-        .card{:style => "background-color: black;"}
-          %img.card-img-top{:alt => "...", :src => @random_track.album.images[0]["url"]}
-          .card-body
-            %h5.card-title.text-white
-              %a.nav-link.py-3.px-0.px-lg-3.rounded.text-white{:href => ""} Artist (WIP)
-        
-    %br
+    /   / .col-12.col-md-6.col-lg-3.col-xl-3.mt-3
+    /   /   .card{:style => "background-color: black;"}
+    /   /     %img.card-img-top{:alt => "...", :src => @random_track.album.images[0]["url"]}
+    /   /     .card-body
+    /   /       %h5.card-title.text-white
+    /   /         %a.nav-link.py-3.px-0.px-lg-3.rounded.text-white{:href => ""} Artist (WIP)
+    / %br
 
     
 / Portfolio Section

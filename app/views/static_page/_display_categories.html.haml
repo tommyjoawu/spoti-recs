@@ -12,7 +12,7 @@
         /     = cat.name
         /   %td 
         /     %img{:alt => "...", :src => cat.icons[0]["url"]}
-        .col-12.col-md-6.col-lg-4.col-xl-4.mt-3
+        .col-12.col-md-4.col-lg-3.col-xl-3.mt-3
           - cat_name = cat.name
           = link_to static_page_recommended_artists_path(cat_name: cat_name) do
             .card{:style => ""}

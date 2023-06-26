@@ -1,34 +1,45 @@
 / Masthead
 %header.masthead.bg-primary
   .container.d-flex.align-items-center.flex-column
-    .row.mt-3
-      .col-12
-        %h1.text-white 
-          Recommendations
-    / %input#myInput{:onkeyup => "myFunction()", :placeholder => "Search for names..", :title => "Type in a name", :type => "text"}/
-    .row
-      %table#myTable
-        - @tracks.each do |track|
-          / %tr
-          /   %td   
-          /     = cat.name
-          /   %td 
-          /     %img{:alt => "...", :src => cat.icons[0]["url"]}
-          .col-12.col-md-6.col-lg-3.col-xl-3.mt-3
-            .card.text-white{:style => "background-color: black;"}
-              %img.card-img-top{:alt => "...", :src => track.album.images[0]["url"]}
-              .card-body
-                %h5.card-title 
-                  = track.name
-                %p.card-text
-                  %li
-                    = "Artist: #{track.artists[0].name}"
-                  %li
-                    = "Album: #{track.album.name}"
-                  .mt-3
-                  %a.card-link{:href => track.uri, :target => "_blank"} Spotify
+    - if @tracks.empty?
+      .row.mt-3
+        .col-12
+          %h1.text-white 
+            No recommendations returned by Spotify
+      %hr
+      .row.mt-3
+        .col-12
+          %h1.text-white.text-center
+            = link_to "Try Again", root_path, class: "button btn btn-lg btn-light"
+    - else
+      .row.mt-3
+        .col-12
+          %h1.text-white 
+            Recommendations
+      / %input#myInput{:onkeyup => "myFunction()", :placeholder => "Search for names..", :title => "Type in a name", :type => "text"}/
+      .row
+        %table#myTable
+          - @tracks.each do |track|
+            / %tr
+            /   %td   
+            /     = cat.name
+            /   %td 
+            /     %img{:alt => "...", :src => cat.icons[0]["url"]}
+            .col-12.col-md-6.col-lg-3.col-xl-3.mt-3
+              .card.text-white{:style => "background-color: black;"}
+                %img.card-img-top{:alt => "...", :src => track.album.images[0]["url"]}
+                .card-body
+                  %h5.card-title 
+                    = track.name
+                  %p.card-text
+                    %li
+                      = "Artist: #{track.artists[0].name}"
+                    %li
+                      = "Album: #{track.album.name}"
+                    .mt-3
+                    %a.card-link{:href => track.uri, :target => "_blank"} Spotify
 
-      %br
+        %br
 
     
 
